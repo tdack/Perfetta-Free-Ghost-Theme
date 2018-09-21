@@ -5,13 +5,13 @@
     <article class="{{post_class}}">
     {{#post}}
          {{#contentFor "metaTags"}} 
-            <meta property="article:author" content="{{author.name}}">
+            <meta property="article:author" content="{{primary_author.name}}">
         {{/contentFor}}
 
         <div>    
             <header class="post-header">
-                {{#if image}}
-                	<img src="{{image}}" alt="{{{title}}}" />
+                {{#if feature_image}}
+                	<img src="{{img_url}}" alt="{{{title}}}" />
                 {{/if}}
                 
                 <h2 class="post-title">
@@ -41,14 +41,14 @@
 		        </section>
 				
                 <section class="author">
-                    {{#if author.image}}
-                    <a href="{{author.website}}" class="post-author-avatar">
-                        <img src="{{author.image}}" alt="{{author.name}}">
+                    {{#if primary_author.profile_image}}
+                    <a href="{{primary_author.website}}" class="post-author-avatar">
+                        <img src="{{primary_author.profile_image}}" alt="{{primary_author.name}}">
                     </a>
                     {{/if}}
 
-                    <h3>{{author.name}}</h3>
-                    <p>{{author.bio}}</p>
+                    <h3>{{primary_author.name}}</h3>
+                    <p>{{primary_author.bio}}</p>
                 </section>
             </footer>
         </div>
@@ -61,7 +61,7 @@
 
             <dl>
                 <dt class="item-author">by</dt>
-                <dd>{{author}}</dd>
+                <dd>{{authors}}</dd>
                
                 {{#if tags}}
                 <dt class="item-tags">tagged as:</dt>

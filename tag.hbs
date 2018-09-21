@@ -13,8 +13,8 @@
     <article class="{{post_class}}" data-scroll-reveal="enter bottom">
         <div>    
             <header class="post-header">
-                {{#if image}}
-                	<img src="{{image}}" alt="{{{title}}}" />
+                {{#if feature_image}}
+                	<img src="{{img_url}}" alt="{{{title}}}" />
                 {{/if}}
                 
                 <h2 class="post-title">
@@ -36,7 +36,7 @@
 
             <dl>
                 <dt class="item-author">by</dt>
-                <dd>{{author}}</dd>
+                <dd>{{authors}}</dd>
                
                 {{#if tags}}
                 <dt class="item-tags">tagged as:</dt>
