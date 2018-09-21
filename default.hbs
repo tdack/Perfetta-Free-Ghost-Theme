@@ -7,8 +7,7 @@
 
     {{! Page Meta }}
     <title>{{meta_title}}</title>
-    <meta name="description" content="{{meta_description}}" />
-
+    
     <meta name="HandheldFriendly" content="True" />
     <meta name="MobileOptimized" content="320" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -35,7 +34,7 @@
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
 </head>
-<body class="{{body_class}}{{#if @blog.cover}} custom-bg{{else}} default-bg{{/if}}"{{#if @blog.cover}} style="background-image: url({{@blog.cover}})"{{/if}}>
+<body class="{{body_class}}{{#if @blog.cover_image}} custom-bg{{else}} default-bg{{/if}}"{{#if @blog.cover_image}} style="background-image: url({{@blog.cover_image}})"{{/if}}>
     {{> logo}}
     
     {{#if @blog.navigation}}
@@ -48,12 +47,6 @@
 
     {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_foot}}
-
-    <script type="text/javascript">  
-    if (typeof jQuery == 'undefined') {
-  	document.write('<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></'+'script>');
-    }
-    </script>
 
     <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
